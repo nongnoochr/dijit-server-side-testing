@@ -1,0 +1,30 @@
+{
+  "name": "dijit-server-side-testing",
+  "version": "1.0.0",
+  "description": "Example of how to test dijit widgets in nodejs with mocha",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nongnoochr/dijit-server-side-testing.git"
+  },
+  "author": "NongR",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nongnoochr/dijit-server-side-testing/issues"
+  },
+  "homepage": "https://github.com/nongnoochr/dijit-server-side-testing#readme",
+  "dependencies": {
+    "dijit": "^1.15.0",
+    "dojo": "^1.15.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "http-server": "^0.11.1",
+    "jquery": "^3.4.1",
+    "jsdom": "^15.1.1",
+    "moch": "0.0.1"
+  }
+}
