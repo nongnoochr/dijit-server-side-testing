@@ -12,7 +12,7 @@ define([
 
 		//	some properties
 		baseClass: "someWidget",
-		title: 'Widget Title',	//	we'll set this from the widget def
+		title: 'Button Widget',	//	we'll set this from the widget def
 
 		//	hidden counter
 		_counter: 1,

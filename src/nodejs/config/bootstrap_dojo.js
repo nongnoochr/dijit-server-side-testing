@@ -1,3 +1,4 @@
+// Load packages specification for our app in the custom_packages
 const customPackages = require('./custom_packages');
 
 module.exports = (loadModules) => {
@@ -28,9 +29,13 @@ module.exports = (loadModules) => {
         // this really isn't always a good idea and it is better to be
         // explicit about our package map.
         packages: packages,
+
+        // dojo/domReady is not aware of a window object that we save in the 
+        // global variable and we need to patch this (See (#Patch) in 
+        // "dojo_patches/domReady")
         aliases: [["dojo/domReady", "dojo_patches/domReady"]],
+        
         deps: loadModules, // And array of modules to load on "boot",
-        // callback: setup
     };
 
 

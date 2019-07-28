@@ -1,11 +1,8 @@
 
 require([
     "dojo/has"
-
-
 ], function(
     has
-    
 ){
 
     // We need to create a window object and import required libraries and add
@@ -31,16 +28,17 @@ require([
                 console.log('================================');
                 console.log('|- Setup window object in JSDom');
     
+                // Refer to : https://airbnb.io/enzyme/docs/guides/jsdom.html
                 var JSDOM = jsdom.JSDOM;
                 var dom = new JSDOM('<!doctype html><html><body></body></html>');
-                // https://airbnb.io/enzyme/docs/guides/jsdom.html
-  
+                
                 window = dom.window;
                 document = dom.window.document;
                 navigator = {
                     userAgent: 'node.js',
                 };
 
+                // Reference: http://jamesthom.as/blog/2013/01/15/server-side-dijit/
                 // Manually add event listener test as this was only included in 
                 // the "host-browser" profile.
                 has.add("dom-addeventlistener", !!global.document.addEventListener);

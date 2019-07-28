@@ -1,4 +1,4 @@
-const bootstrap = require('./utils/bootstrap_dojo');
+const bootstrap = require('../../src/nodejs/config/bootstrap_dojo');
 
 bootstrap([
     "app-test/twidgets_CustomWidget",
