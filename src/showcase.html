@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+    <link rel="stylesheet" href="../node_modules/dijit/themes/claro/claro.css">
+	
+    <script>
+        dojoConfig = {
+            parseOnLoad: false,
+            packages: [{
+                name: "app-src",
+                location: "../../src/js"
+            }],
+        }
+    </script>
+    <script src='../node_modules/dojo/dojo.js'></script>
+	
+	<script>
+require([
+     "dojo/ready",
+     "app-src/widgets/CustomWidget"
+ ], function(ready, CustomWidget){
+
+     ready(function(){
+         // Call the parser manually so it runs after our widget is defined, and page has finished loading
+         var newTitle = 'CLICK ME!';
+
+         var myWidget = new CustomWidget({
+            'title': newTitle
+        });
+        myWidget.placeAt('widget_container')
+
+        myWidget.startup();
+     });
+ });
+	</script>
+</head>
+<body class="claro">
+    <div>
+        <div><h1>Custom widget</h1></div>
+        <hr />
+        <div>
+            <div id='widget_container'></div>
+        </div>
+
+    </div>
+    
+</body>
+</html>
