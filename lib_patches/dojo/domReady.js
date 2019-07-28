@@ -1,3 +1,7 @@
+// This file is a copy of node_modules/dojo/domReady.js
+// but it contains code (See #Patch) to enable rendering
+// of a dijit widget in jsdom
+
 define(['dojo/global', 'dojo/has'], function(global, has){
 	var doc = document,
 		readyStates = { 'loaded': 1, 'complete': 1 },
