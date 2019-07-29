@@ -131,9 +131,15 @@ $ node src/showcase_in_jsdom.js
 
 <hr />
 
+### Source under test:
+
+Below is a list of source that will be tested:
+* CustomWidget (requires dom in some cases) [./src/js/widgets/CustomWidget.js](./src/js/widgets/CustomWidget.js)
+* mathops (does not require dom) [./src/js/utils/mathops.js](./src/js/utils/mathops.js)
+
 ### How to setup a nodejs test with mocha<a name="how-to-setup-test-nodejs"></a>
 
-1. Since mocha apis will be available globally when running tests, we don't need to import it (See [./test/twidgets_CustomWidget.js](./test/twidgets_CustomWidget.js))
+1. Since mocha apis will be available globally when running tests, we don't need to import it (See [./test/twidgets_CustomWidget.js](./test/twidgets_CustomWidget.js) and [./test/tutils_mathops.js](./test/tutils_mathops.js))
     * Note that we will use the same test script when running test in **nodejs** and **browser**
 2. However, to use other libraries in our tests, i.e. chai (for assertions), jQuery (for dom traversal), we need to make them available globally by importing using `"dojo/node!<package_name>"` and setting them in a global variable (See [./test/utils/setup_env.js](./test/utils/setup_env.js))
 3. Similar to the previous example, we will need to setup the window object before running test. I put together all required setups in (See [./test/utils/setup_env.js](./test/utils/setup_env.js)) and import before running the test in [./test/twidgets_CustomWidget.js](./test/twidgets_CustomWidget.js)
@@ -153,9 +159,9 @@ $ npm test test/nodejs/runner.js
 
 ### How to setup a browser test with mocha<a name="how-to-setup-test-browser"></a>
 
-In this case, we will use the same test implement in [./test/twidgets_CustomWidget.js](./test/twidgets_CustomWidget.js) but run it in a browser instead.
+In this case, we will use the same test implement in [./test/twidgets_CustomWidget.js](./test/twidgets_CustomWidget.js) and [./test/tutils_mathops.js](./test/tutils_mathops.js) but run them in a browser instead.
 
-1. To run mocha test with dojo/dijit in a browser, we need to load required libraries and configure the test/dojo environments+test file See [./src/browser/runner.html](./src/browser/runner.html)
+1. To run mocha test with dojo/dijit in a browser, we need to load required libraries and configure the test/dojo environments+test files. See [./src/browser/runner.html](./src/browser/runner.html)
 
 2. Start a host server to run the test
 
