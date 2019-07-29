@@ -55,6 +55,7 @@ Then navigate to the test page `http://127.0.0.1:8080/test/browser/runner.html`
 
 ### Source under Test
 
+Source for the Widget under test can be found in [./src/js/widgets/CustomWidget.js](./src/js/widgets/CustomWidget.js)
 #### NodeJS
 
 See more details in [How to setup nodejs to render a dijit widget](#how-to-setup-dijit-nodejs)
