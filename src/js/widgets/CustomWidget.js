@@ -15,8 +15,7 @@ define([
 		title: 'Button Widget',	//	we'll set this from the widget def
 
 		//	hidden counter
-		_counter: 1,
-		_firstClicked: false,
+		_counter: 0,
 
 		constructor: function(opt) {
 			if (opt) {
@@ -27,16 +26,31 @@ define([
 
 		//	define an onClick handler
 		_onClick: function(){
-			if(this._firstClicked){
-				this.titleNode.innerHTML = this.title + " was clicked " + (++this._counter) + " times.";
-			} else {
-				this.titleNode.innerHTML = this.title + " was clicked!";
-				this._firstClicked = true;
-			}
+
+			// Increment the internal counter
+			++this._counter;
+
+			var titleText = this._getTextOnClick();
+			this.titleNode.innerHTML = titleText;
+
 		},
 
 		postCreate: function(){
 			this.titleNode.innerHTML = this.title;
+		},
+
+		_getTextOnClick: function() {
+
+			var outText = '';
+
+			if(this._counter > 1){
+				outText = this.title + " was clicked " + this._counter + " times.";
+			} else {
+				outText= this.title + " was clicked!";
+			}
+
+			return outText;
+
 		}
 	});
 });

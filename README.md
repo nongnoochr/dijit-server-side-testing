@@ -39,6 +39,9 @@ See more details in [How to setup a nodejs test with mocha](#how-to-setup-test-n
 $ npm test test/nodejs/runner.js 
 ```
 
+![Test results in nodejs](/artifacts/test_results_nodejs.png)
+
+
 #### Browser
 
 See more details in [How to setup a browser test with mocha](#how-to-setup-test-browser)
@@ -47,6 +50,8 @@ See more details in [How to setup a browser test with mocha](#how-to-setup-test-
 $ npm start
 ```
 Then navigate to the test page `http://127.0.0.1:8080/test/browser/runner.html`
+
+![Test results in nodejs](/artifacts/test_results_browser.png)
 
 ### Source under Test
 
@@ -58,12 +63,17 @@ See more details in [How to setup nodejs to render a dijit widget](#how-to-setup
 $ node src/showcase_in_jsdom.js 
 ```
 
+![Showcase page in nodejs](/artifacts/showcase_nodejs.png)
+
 #### Browser
 
 ```
 $ npm start
 ```
 Then navigate to the test page `http://127.0.0.1:8080/src/showcase.html`
+
+<img src="./artifacts/showcase_browser.png" width="400" >
+
 
 <hr />
 
