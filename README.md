@@ -66,6 +66,7 @@ $ node src/showcase_in_jsdom.js
 ```
 
 [./src/nodejs/showcase.js](./src/nodejs/showcase.js)
+
 ![Showcase page in nodejs](/artifacts/showcase_nodejs.png)
 
 #### Browser
@@ -76,6 +77,7 @@ $ npm start
 Then navigate to the test page `http://127.0.0.1:8080/src/showcase.html`
 
 [./src/showcase.html](./src/showcase.html)
+
 <img src="./artifacts/showcase_browser.png" width="400" >
 
 
