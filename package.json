@@ -19,7 +19,7 @@
   "homepage": "https://github.com/nongnoochr/dijit-server-side-testing#readme",
   "dependencies": {
     "dijit": "^1.15.0",
-    "dojo": "^1.15.0"
+    "dojo": "^1.15.3"
   },
   "devDependencies": {
     "chai": "^4.2.0",
