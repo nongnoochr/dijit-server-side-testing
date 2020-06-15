@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/nongnoochr/dijit-server-side-testing#readme",
   "dependencies": {
-    "dijit": "^1.15.0",
+    "dijit": "^1.15.4",
     "dojo": "^1.15.0"
   },
   "devDependencies": {
